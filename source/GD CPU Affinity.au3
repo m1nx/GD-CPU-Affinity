@@ -45,7 +45,7 @@ EndFunc   ;==>_Processor
 Func _CreateAffinityMask($CPUthreads)
 	Local $dMask = 1, $hMask = 1, $current = 1
 	For $i = 2 To $CPUthreads
-		$current *= 2
+		$current *= 3
 		If BitAND($i, 1) Then $dMask += $current
 	Next
 	$hMask = hex($dMask)
